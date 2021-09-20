@@ -1,0 +1,219 @@
+header {
+    background-color: hsl(180, 29%, 50%);
+}
+
+.header-bg {
+    width: 100vw;
+}
+
+.mobile-header-bg {
+    display: none;
+}
+
+main section {
+    width: 100vw;
+    min-height: 90vh;
+    background-color: hsl(180, 52%, 96%);
+}
+
+.filters {
+    width: 80vw;
+    margin-left: 10vw;
+    padding: 1vh 2vw;
+    display: flex;
+    flex-direction: row;
+    transform: translateY(-5vh);
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-shadow: 0px 3px 8px 2px hsla(180, 29%, 50%, 0.25); 
+    box-shadow: 0px 3px 8px 2px hsla(180, 29%, 50%, 0.25);
+}
+
+.filter-tags {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.filter-tags div {
+    height: 25px;
+    display: inline-block;
+    line-height: 2px;
+    margin: 1vh 1vw;
+    padding-left: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 3px;
+    color: hsl(180, 29%, 50%);
+    background-color: hsl(180, 31%, 95%);
+}
+
+.filter-tags div i {
+    height: 100%;
+    width: 25px;
+    margin-left: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: hsl(180, 31%, 95%);
+    background-color: hsl(180, 29%, 50%);
+}
+
+.filters .filter-tags div i:hover {
+    background-color: hsl(180, 14%, 20%);
+}
+
+.filters button {
+    margin-left: auto;
+    border: 0;
+    cursor: pointer;
+    font-weight: 400;
+    color: hsl(180, 29%, 50%);
+    background-color: transparent;
+}
+
+.filters button:hover {
+    text-decoration: underline;
+}
+
+.listings {
+    padding-top: 5vh;
+}
+
+dl {
+    margin: 0;
+    padding: 1vh 0;
+}
+
+dt {
+    width: 80vw;
+    margin-left: 10vw;
+    padding: 1vh 2vw;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-shadow: 0px 3px 8px 2px hsla(180, 29%, 50%, 0.25); 
+    box-shadow: 0px 3px 8px 2px hsla(180, 29%, 50%, 0.25);
+}
+
+.company-logo img {
+    padding: 1.5vh;
+}
+
+.company-position {
+    padding: 0 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.company-name-extra h6 {
+    display: inline-block;
+    margin: 1vh 1vw 1vh 0;
+    color: hsl(180, 29%, 50%);
+}
+
+.company-name-extra span {
+    display: inline-block;
+    padding: 6px 7px 3px 7px;
+    margin-right: 6px;
+    font-size: 10px;
+    font-style: uppercase;
+    border-radius: 50px;
+    color: white;
+}
+
+.company-name-extra .new {
+    background-color: hsl(180, 29%, 50%);
+}
+
+.company-name-extra .featured {
+    background-color: hsl(180, 14%, 20%);
+}
+
+.company-position h4 {
+    margin: 1vh 0;
+    cursor: pointer;
+    color: hsl(180, 14%, 20%);
+}
+
+.company-position h4:hover {
+    color: hsl(180, 29%, 50%);
+}
+
+.company-position-info {
+    font-size: 10.7px;
+    color: hsl(180, 8%, 52%);
+}
+
+.company-position-tags {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.company-position-tags h6 {
+    display: inline-block;
+    margin: 0 0.5vw;
+    padding: 1vh 0.75vw 0.7vh 0.75vw;
+    border-radius: 3px;
+    cursor: pointer;
+    color: hsl(180, 29%, 50%);
+    background-color: hsl(180, 31%, 95%);
+}
+
+.company-position-tags h6:hover {
+    color: hsl(180, 31%, 95%);
+    background-color: hsl(180, 29%, 50%);
+}
+
+footer {
+    height: 10vh;
+    background-color: hsl(180, 52%, 96%);
+}
+
+.attribution {
+    padding-top: 8vh;
+    font-size: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .desktop-header-bg {
+        display: none;
+    }
+
+    .mobile-header-bg {
+        display: block;
+    }
+
+    dt {
+        flex-direction: column;
+    }
+
+    .company-logo img {
+        margin-top: -6vh;
+        height: 7vh;
+    }
+
+    .company-position h4 {
+        margin-bottom: 2vh;
+    }
+
+    .company-position-info {
+        padding: 1vh 0 2vh 0;
+        border-bottom: 1px solid hsla(180, 8%, 52%, 0.25);
+    }
+
+    .company-position-tags {
+        margin: 3vh 0 0 0 ;
+        justify-content: flex-start;
+    }
+}

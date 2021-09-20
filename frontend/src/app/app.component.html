@@ -1,0 +1,35 @@
+<header>
+  <img class="header-bg desktop-header-bg" src="../assets/bg-header-desktop.svg">
+  <img class="header-bg mobile-header-bg" src="../assets/bg-header-mobile.svg">
+</header>
+<main>
+  <section>
+    <div class="filters" *ngIf="filters.length !== 0" >
+      <div class="filter-tags" *ngFor="let filter of filters"><div>{{filter}} <i class="fa fa-close"></i></div></div>
+      <button (click)="clearFilter()">Clear</button>
+    </div>
+    <div class="listings">
+      <dl *ngFor="let data of currentData">
+        <dt>
+          <div class="company-logo"><img src={{data.logo}}></div>
+          <div class="company-position">
+            <div class="company-name-extra"><h6>{{data.company}}</h6><span *ngIf="data.new === true" class="new">NEW!</span><span *ngIf="data.featured === true" class="featured">FEATURED</span></div>
+            <h4>{{data.position}}</h4>
+            <div class="company-position-info">{{data.postedAt}} &bull; {{data.contract}} &bull; {{data.location}}</div>
+          </div>
+          <div class="company-position-tags">
+            <div *ngFor="let value of data.languages.concat(data.tools)">
+              <h6 (click)="addFilter(value)">{{value}}</h6>
+            </div>
+          </div>
+        </dt>
+      </dl>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</footer>
