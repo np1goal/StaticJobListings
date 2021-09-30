@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  datas = [
+  datas: any = [
     {
       "id": 1,
       "company": "Photosnap",
@@ -159,7 +159,7 @@ export class AppComponent implements OnInit {
     }
   ]
 
-  currentData = this.datas
+  currentData: any = []
   filteredData: Array<{id: number, company: string, logo: string, new: boolean, featured: boolean, position: string, role: string, level: string, postedAt: string, contract: string, location: string, languages: string[], tools: string[] }> = []
 
   filters: string[] = []
@@ -169,24 +169,20 @@ export class AppComponent implements OnInit {
   }
 
   createDataArray(filter: string = '') {
-    console.log('Hello')
     if(this.filters.length === 0) {
-      console.log('Hello no filter')
       this.filteredData = this.datas
     } else {
       this.filteredData = []
-      console.log('Hello filtered', this.currentData, this.currentData.length, this.filteredData)
       for(let i = 0; i < this.currentData.length; i++) {
-        console.log(this.currentData[i]['languages'].includes(filter) || this.currentData[i]['tools'].includes(filter))
         if(this.currentData[i]['languages'].includes(filter) || this.currentData[i]['tools'].includes(filter)) {
-          console.log('Hello filtered ', this.currentData[i])
-          this.filteredData.push(this.datas[i])
-          console.log('Inside if ', this.filteredData)
+          console.log('Inside if ', i, this.currentData[i])
+          this.filteredData.push(this.currentData[i])
         }
       }
-      console.log('Current data ', this.currentData)
-      this.currentData = this.filteredData
+      console.log('Filtered', this.filteredData)
     }
+    this.currentData = this.filteredData
+    console.log('Current',this.currentData)
   }
 
   addFilter(value: string) {
